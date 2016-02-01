@@ -2,23 +2,25 @@
 
 import random
 
-patent_areas = "Utility", "Design", "Plant", "Reissue", "Defensive Publication", "Statutory Invention Registration", "Re-examination", "Additional Improvement"
-
-def say_hi():
-	print("hello!")
-
-def rand_range(i_range):
-	patent_type_random_number = random.randrange(0,i_range)
-	return patent_type_random_number
+patent_areas = "Utility", "Design"
 
 def rand_pat_area():
-	area = patent_areas[(rand_range(7))]
+	area = patent_areas[(randrange(2))]
 	print(area)
 	return area
 
-def generators(an_area):
+def url_generators(an_area):
 	if an_area == patent_areas[0]:
-		result = random.choice("1234567890")
-		final_result = result * 7
-		return final_result
-		print final_result
+		final_url = "https://www.google.com/patents/US"+ str(random.randrange(9247000))
+		return final_url
+		print(final_url)
+	elif an_area == patent_areas[1]:
+		final_url = "https://www.google.com/patents/USD"+ str(random.randrange(748365))
+		return final_url
+		print(final_url)
+	else:
+		print("Somehow you broke me!")
+
+
+
+
