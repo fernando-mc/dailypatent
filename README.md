@@ -1,3 +1,3 @@
-This is a python tool for generating a random patent URL from http://patft.uspto.gov/netahtml/PTO/srchnum.htm
+This is a python tool for generating a random patent URL. It uses Google's patent database because it has more easily generated URLs. The USPTO can also be used to search for these patents.
 
-I hope to extent it into a python bot that tweets random patents on a daily basis
+In addition to generating a URL it will send a Tweet out on the account https://www.twitter.com/dailypatent
