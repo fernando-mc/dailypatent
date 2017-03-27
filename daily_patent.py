@@ -39,12 +39,9 @@ def url_generators(an_area):
 	else:
 		print "Somehow you broke me!"
 
-patent_url=url_generators(rand_pat_area())
-
-prefix_texts=["Here's a #patent you've probably never heard of: ","Will this #random #patent be a troll or the real-deal? ", "I like random #patents. What about you? ","Hey, there's a new random patent: ","How many #patent tweets does it take for you to find something you've used? ","Patents. Patents. #patents. Yup, here's another: "]
-
-random_prefix=prefix_texts[r.randrange(len(prefix_texts)-1)]
-
-random_status_update=random_prefix + patent_url
-
-tweet(random_status_update)
+def handler(event, context):
+	patent_url=url_generators(rand_pat_area())
+	prefix_texts=["Here's a #patent you've probably never heard of: ","Will this #random #patent be a troll or the real-deal? ", "I like random #patents. What about you? ","Hey, there's a new random patent: ","How many #patent tweets does it take for you to find something you've used? ","Patents. Patents. #patents. Yup, here's another: "]
+	random_prefix=prefix_texts[r.randrange(len(prefix_texts)-1)]
+	random_status_update=random_prefix + patent_url
+	tweet(random_status_update)
